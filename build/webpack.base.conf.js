@@ -2,19 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports = {
-  entry: {
-    bundle: path.resolve(__dirname, '../src/components/index.js')
-  },
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js'
-  },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js', // TODO:
+      'vue$': 'vue/dist/vue.esm.js', // vue ES module版本，使webpack可以找到vue文件
       '@': path.resolve(__dirname, '../src'), // 解析@为src目录
     },
-    extensions: ['*', '.js', '.json', '.vue']  // import可省略后缀
+    extensions: ['*', '.js', '.json', '.vue'] // import可省略后缀
   },
   module: {
     rules: [{
@@ -40,9 +33,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader'] // 解析vue
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader'] // 解析css文件，postcss后处理器
+      },
+      {
+        test: /\.less$/,
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'less-loader'] // 解析less文件
       }
-
     ]
   },
   plugins: [
