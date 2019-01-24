@@ -42,8 +42,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
+    new VueLoaderPlugin(), // 也是为了解析vue
+    new HtmlWebpackPlugin({ // 将打包产生的文件挂载到目标html上
       template: path.resolve(__dirname, '../index.html')
     })
   ]

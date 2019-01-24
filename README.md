@@ -25,9 +25,11 @@ $ npm install
   ``` bash
   npm run dev
   ``` 
-  与传统的vue-cli脚手架相同的开发模式，支持vue-router
+  与传统的vue-cli脚手架相同的开发模式，入口为src/index.js，支持vue-router
 - html
+  在components/index.js中注册组件后进行打包
   ``` bash
   npm run build
   ```
-  在components/index.js中注册组件后,直接在 components/dev.html中直接使用标签即可
+  然后直接在 components/dev.html中直接使用标签即可
+ 
