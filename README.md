@@ -12,7 +12,7 @@ $ npm install
 
 # 最佳实践
 ## init project
-- 推荐使用[v-scofford](https://github.com/1465799166/vs-scaffold)进行模板初始化
+- 推荐使用[vs-scofford](https://github.com/1465799166/vs-scaffold)进行模板初始化
 - 修改package.json中的相关信息
   
 ## 开发方式
