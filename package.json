@@ -49,6 +49,14 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "autoprefixer": "^9.4.7",
+    "cssnano": "^4.1.8",
+    "cssnano-preset-advanced": "^4.0.6",
+    "postcss-aspect-ratio-mini": "^1.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-px-to-viewport": "^1.0.0",
+    "postcss-url": "^8.0.0",
+    "postcss-write-svg": "^3.0.1",
     "vue": "^2.5.22",
     "vue-router": "^3.0.2"
   }
