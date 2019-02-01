@@ -31,14 +31,6 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader' // 解析vue
       },
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader', 'postcss-loader'] // 解析css文件，postcss后处理器
-      },
-      {
-        test: /\.less$/,
-        use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'less-loader'] // 解析less文件
-      }
     ]
   },
   plugins: [
